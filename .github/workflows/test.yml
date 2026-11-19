@@ -28,7 +28,13 @@ jobs:
     timeout-minutes: 58
     steps:
       - uses: actions/checkout@v4
-      - run: docker run --rm -v "$PWD:/w" alt:p11 bash /w/office.sh 2>&1 | tail -200
+      - name: host X server + screenshot daemon
+        run: |
+          sudo apt-get update -q >/dev/null; sudo apt-get install -y -q xvfb openbox ffmpeg >/dev/null 2>&1 || true
+          Xvfb :99 -screen 0 1366x768x24 -ac -nolisten tcp & sleep 2; DISPLAY=:99 openbox & sleep 1
+          mkdir -p out/office; chmod 777 out out/office
+          nohup bash -c 'while true; do for r in out/office/req_*; do [ -e "$r" ] || continue; n=${r#out/office/req_}; ffmpeg -loglevel error -y -f x11grab -video_size 1366x768 -i :99 -frames:v 1 "out/office/$n.png"; rm -f "$r"; done; sleep 1; done' > /tmp/shotd.log 2>&1 &
+      - run: docker run --rm -v "$PWD:/w" -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=:99 --shm-size=1g alt:p11 bash /w/office.sh 2>&1 | tail -200
         continue-on-error: true
         timeout-minutes: 50
       - name: save results
@@ -39,3 +45,20 @@ jobs:
           git checkout -B results-office
           git add -f out/office; git commit -q -m "office results" || true
           git push -f origin results-office
+  office_ubuntu:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env: { GH_TOKEN: "${{ github.token }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash office_ubuntu.sh
+        continue-on-error: true
+        timeout-minutes: 32
+      - name: save results
+        if: always()
+        run: |
+          sudo chown -R $(id -u):$(id -g) out || true
+          git config user.name github-actions; git config user.email actions@github.com
+          git checkout -B results-office-ubuntu
+          git add -f out/office_ubuntu; git commit -q -m "office ubuntu results" || true
+          git push -f origin results-office-ubuntu

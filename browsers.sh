@@ -5,7 +5,7 @@ exec > >(tee $OUT/log.txt) 2>&1
 set -x
 export DEBIAN_FRONTEND=noninteractive
 timeout 600 sudo -E apt-get update -qq
-timeout 600 sudo -E apt-get install -y -qq xvfb xdotool imagemagick libnss3-tools fonts-dejavu-core fonts-noto-core x11-utils wmctrl openbox >/dev/null
+for p in xvfb libnss3-tools fonts-dejavu-core fonts-noto-core x11-utils openbox ffmpeg; do timeout 600 sudo -E apt-get install -y -q $p > /tmp/apt_$p.log 2>&1; echo "$p exit=$?" >> $OUT/apt.txt; tail -2 /tmp/apt_$p.log >> $OUT/apt.txt; done
 # Chromium-GOST
 mkdir -p /tmp/cg && timeout 120 gh release download -R deemru/Chromium-Gost --pattern '*amd64.deb' -D /tmp/cg && timeout 600 sudo -E apt-get install -y -qq /tmp/cg/*.deb
 { echo "== versions"; ls /opt; which firefox chromium-gost chromium-gost-stable yandex-browser google-chrome; timeout 20 firefox --version; dpkg -l | grep -i -E "chromium-gost|yandex|firefox"; dpkg -L chromium-gost-stable 2>/dev/null | grep -E "bin/|/chrome$" ; } > $OUT/versions.txt 2>&1
@@ -23,7 +23,7 @@ timeout 60 curl -sS -L -o /tmp/sub24.cer https://gu-st.ru/content/downloads/Russ
 for c in /tmp/root.cer /tmp/sub.cer /tmp/sub24.cer; do openssl x509 -in $c -noout -subject -issuer -dates 2>/dev/null || openssl x509 -inform der -in $c -noout -subject -issuer -dates; done > $OUT/mincifry_certs.txt 2>&1
 Xvfb :99 -screen 0 1366x768x24 & sleep 2; export DISPLAY=:99; openbox & sleep 1
 shot(){ # browser-name url file
-  sleep 22; import -window root "$OUT/$3.png"; }
+  sleep 22; ffmpeg -loglevel error -y -f x11grab -video_size 1366x768 -i :99 -frames:v 1 "$OUT/$3.png"; }
 run_chromium(){ # bin name
   for s in fstec.ru cryptopro.ru www.gosuslugi.ru; do
     timeout 40 $1 --no-first-run --no-default-browser-check --password-store=basic --user-data-dir=/tmp/p_$2 --window-position=0,0 --window-size=1366,768 --start-maximized https://$s >/dev/null 2>&1 &
