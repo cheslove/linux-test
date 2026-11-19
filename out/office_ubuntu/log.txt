@@ -1,0 +1,29 @@
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ timeout 600 sudo -E apt-get update -q
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q xvfb
++ echo 'xvfb exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q openbox
++ echo 'openbox exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q ffmpeg
++ echo 'ffmpeg exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q fonts-dejavu-core
++ echo 'fonts-dejavu-core exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q fonts-liberation2
++ echo 'fonts-liberation2 exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q fonts-crosextra-carlito
++ echo 'fonts-crosextra-carlito exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q fonts-crosextra-caladea
++ echo 'fonts-crosextra-caladea exit=0'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q libreoffice
++ echo 'libreoffice exit=124'
++ for p in xvfb openbox ffmpeg fonts-dejavu-core fonts-liberation2 fonts-crosextra-carlito fonts-crosextra-caladea libreoffice libreoffice-l10n-ru
++ timeout 900 sudo -E apt-get install -y -q libreoffice-l10n-ru

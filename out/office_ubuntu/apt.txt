@@ -1,0 +1,8 @@
+xvfb exit=0
+openbox exit=0
+ffmpeg exit=0
+fonts-dejavu-core exit=0
+fonts-liberation2 exit=0
+fonts-crosextra-carlito exit=0
+fonts-crosextra-caladea exit=0
+libreoffice exit=124
