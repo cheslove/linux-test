@@ -7,6 +7,7 @@ permissions:
   contents: write
 jobs:
   browsers:
+    if: "!contains(github.event.head_commit.message, '[office-only]')"
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     env: { GH_TOKEN: "${{ github.token }}" }
@@ -46,6 +47,7 @@ jobs:
           git add -f out/office; git commit -q -m "office results" || true
           git push -f origin results-office
   office_ubuntu:
+    if: "!contains(github.event.head_commit.message, '[office-only]')"
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     env: { GH_TOKEN: "${{ github.token }}" }

@@ -6,11 +6,13 @@ exec > >(tee $OUT/log.txt) 2>&1
 set -x
 cat /etc/os-release > $OUT/os.txt
 cat /etc/apt/sources.list /etc/apt/sources.list.d/*.list > $OUT/sources_before.txt 2>&1
-cat > /etc/apt/sources.list.d/zz-p11.list <<'L'
-rpm [p11] http://ftp.altlinux.org/pub/distributions/ALTLinux p11/branch/x86_64 classic
-rpm [p11] http://ftp.altlinux.org/pub/distributions/ALTLinux p11/branch/noarch classic
+rm -f /etc/apt/sources.list.d/*.list
+cat > /etc/apt/sources.list <<'L'
+rpm [p11] http://mirror.yandex.ru/altlinux p11/branch/x86_64 classic
+rpm [p11] http://mirror.yandex.ru/altlinux p11/branch/noarch classic
 L
-timeout 600 apt-get update -q > $OUT/apt_update.txt 2>&1
+for i in 1 2 3; do timeout 900 apt-get update > $OUT/apt_update.txt 2>&1 && grep -q "noarch/classic pkglist" $OUT/apt_update.txt && break; sleep 5; done
+ls -la /var/lib/apt/lists/ >> $OUT/apt_update.txt
 timeout 900 apt-get dist-upgrade -y -q > $OUT/apt_distupgrade.txt 2>&1; echo "dist-upgrade exit=$?" >> $OUT/apt.txt
 for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru; do
   timeout 900 apt-get install -y -q $p > /tmp/inst_$p.log 2>&1; echo "$p exit=$?" >> $OUT/apt.txt; tail -3 /tmp/inst_$p.log >> $OUT/apt.txt
