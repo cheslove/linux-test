@@ -8,10 +8,6 @@ timeout 600 sudo -E apt-get update -qq
 timeout 600 sudo -E apt-get install -y -qq xvfb xdotool imagemagick libnss3-tools fonts-dejavu-core fonts-noto-core x11-utils wmctrl openbox >/dev/null
 # Chromium-GOST
 mkdir -p /tmp/cg && timeout 120 gh release download -R deemru/Chromium-Gost --pattern '*amd64.deb' -D /tmp/cg && timeout 600 sudo -E apt-get install -y -qq /tmp/cg/*.deb
-# Яндекс Браузер
-timeout 60 curl -fsSL https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG | sudo gpg --batch --yes --dearmor -o /usr/share/keyrings/yandex.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/yandex.gpg] http://repo.yandex.ru/yandex-browser/deb stable main" | sudo tee /etc/apt/sources.list.d/yb.list
-timeout 600 sudo -E apt-get update -qq; timeout 600 sudo -E apt-get install -y -qq yandex-browser-stable
 { echo "== versions"; ls /opt; which firefox chromium-gost chromium-gost-stable yandex-browser google-chrome; timeout 20 firefox --version; dpkg -l | grep -i -E "chromium-gost|yandex|firefox"; dpkg -L chromium-gost-stable 2>/dev/null | grep -E "bin/|/chrome$" ; } > $OUT/versions.txt 2>&1
 CG=$(command -v chromium-gost-stable || command -v chromium-gost || ls /opt/chromium-gost/chrome 2>/dev/null)
 YB=$(command -v yandex-browser-stable || command -v yandex-browser)
@@ -48,7 +44,7 @@ user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
 user_pref("intl.locale.requested", "ru");
 U
 [ -n "$CG" ] && run_chromium $CG chromiumgost 1_bez_sertifikata
-[ -n "$YB" ] && run_chromium $YB yandex 1_bez_sertifikata
+GC=$(command -v google-chrome); [ -n "$GC" ] && run_chromium $GC chrome 1_bez_sertifikata
 [ -n "$FF" ] && run_ff 1_bez_sertifikata
 # установка сертификатов Минцифры в хранилища браузеров
 mkdir -p $HOME/.pki/nssdb; timeout 20 certutil -d sql:$HOME/.pki/nssdb -N --empty-password </dev/null 2>/dev/null
@@ -56,4 +52,6 @@ for c in root sub sub24; do certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n "min
 certutil -d sql:$HOME/.pki/nssdb -L > $OUT/nssdb_after.txt 2>&1
 [ -n "$CG" ] && run_chromium $CG chromiumgost 2_s_sertifikatom
 [ -n "$FF" ] && run_ff 2_s_sertifikatom
+[ -n "$GC" ] && run_chromium $GC chrome 2_s_sertifikatom
+{ google-chrome --version; chromium-gost --version; firefox --version; } >> $OUT/versions.txt 2>&1
 ls -la $OUT

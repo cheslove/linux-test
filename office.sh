@@ -4,9 +4,14 @@ OUT=/w/out/office; mkdir -p $OUT
 exec > >(tee $OUT/log.txt) 2>&1
 set -x
 timeout 600 apt-get update -q
-timeout 900 apt-get install -y -q eepm xvfb-run xorg-xvfb xdotool ImageMagick-tools fonts-ttf-dejavu fonts-ttf-liberation openbox wmctrl LibreOffice LibreOffice-langpack-ru 2>&1 | tail -5
+{ apt-repo list; apt-cache policy eepm; } > $OUT/repos.txt 2>&1
+for p in eepm xorg-xvfb xvfb-run xdotool ImageMagick-tools fonts-ttf-dejavu fonts-ttf-liberation fonts-ttf-ms openbox wmctrl LibreOffice LibreOffice-still LibreOffice-langpack-ru wget curl sudo; do
+  timeout 900 apt-get install -y -q $p > /tmp/inst_$p.log 2>&1; echo "$p exit=$?" >> $OUT/apt.txt; tail -3 /tmp/inst_$p.log >> $OUT/apt.txt
+done
+command -v epm || { timeout 120 wget -qO- https://raw.githubusercontent.com/Etersoft/eepm/master/packed/epm.sh > /tmp/epm.sh && bash /tmp/epm.sh --auto ei eepm >> $OUT/apt.txt 2>&1; }
+command -v epm >> $OUT/apt.txt
 { cat /etc/os-release; } > $OUT/os.txt
-for p in onlyoffice-desktopeditors r7-office wps-office myoffice-standard-home-edition myoffice; do
+for p in onlyoffice r7-office wpsoffice myoffice; do
   echo "=== epm play $p" >> $OUT/install.log; timeout 600 epm play --auto $p </dev/null >> $OUT/install.log 2>&1; echo "exit=$?" >> $OUT/install.log
 done
 timeout 120 epm play --list-all </dev/null > $OUT/epm_play_list.txt 2>&1

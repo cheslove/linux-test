@@ -1,5 +1,10 @@
 name: linux-test
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   browsers:
     runs-on: ubuntu-24.04
@@ -10,9 +15,14 @@ jobs:
       - run: bash browsers.sh
         continue-on-error: true
         timeout-minutes: 28
-      - uses: actions/upload-artifact@v4
+      - name: save results
         if: always()
-        with: { name: browsers, path: out/browsers }
+        run: |
+          sudo chown -R $(id -u):$(id -g) out || true
+          git config user.name github-actions; git config user.email actions@github.com
+          git checkout -B results-browsers
+          git add -f out/browsers; git commit -q -m "browsers results" || true
+          git push -f origin results-browsers
   office:
     runs-on: ubuntu-24.04
     timeout-minutes: 58
@@ -21,6 +31,11 @@ jobs:
       - run: docker run --rm -v "$PWD:/w" alt:p11 bash /w/office.sh 2>&1 | tail -200
         continue-on-error: true
         timeout-minutes: 50
-      - uses: actions/upload-artifact@v4
+      - name: save results
         if: always()
-        with: { name: office, path: out/office }
+        run: |
+          sudo chown -R $(id -u):$(id -g) out || true
+          git config user.name github-actions; git config user.email actions@github.com
+          git checkout -B results-office
+          git add -f out/office; git commit -q -m "office results" || true
+          git push -f origin results-office
