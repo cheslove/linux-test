@@ -1,0 +1,21 @@
+xvfb exit=0
+xvfb is already the newest version (2:21.1.12-1ubuntu1.9).
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+libnss3-tools exit=0
+libnss3-tools is already the newest version (2:3.98-1ubuntu0.3).
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+fonts-dejavu-core exit=0
+fonts-dejavu-core set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+fonts-noto-core exit=0
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+x11-utils exit=0
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+openbox exit=0
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ffmpeg exit=0
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.

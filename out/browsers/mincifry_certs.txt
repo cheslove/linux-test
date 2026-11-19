@@ -1,0 +1,18 @@
++ for c in /tmp/root.cer /tmp/sub.cer /tmp/sub24.cer
++ openssl x509 -in /tmp/root.cer -noout -subject -issuer -dates
+subject=C = RU, O = The Ministry of Digital Development and Communications, CN = Russian Trusted Root CA
+issuer=C = RU, O = The Ministry of Digital Development and Communications, CN = Russian Trusted Root CA
+notBefore=Mar  1 21:04:15 2022 GMT
+notAfter=Feb 27 21:04:15 2032 GMT
++ for c in /tmp/root.cer /tmp/sub.cer /tmp/sub24.cer
++ openssl x509 -in /tmp/sub.cer -noout -subject -issuer -dates
+subject=C = RU, O = The Ministry of Digital Development and Communications, CN = Russian Trusted Sub CA
+issuer=C = RU, O = The Ministry of Digital Development and Communications, CN = Russian Trusted Root CA
+notBefore=Mar  2 11:25:19 2022 GMT
+notAfter=Mar  6 11:25:19 2027 GMT
++ for c in /tmp/root.cer /tmp/sub.cer /tmp/sub24.cer
++ openssl x509 -in /tmp/sub24.cer -noout -subject -issuer -dates
+subject=C = RU, O = The Ministry of Digital Development and Communications, CN = Russian Trusted Sub CA
+issuer=C = RU, O = The Ministry of Digital Development and Communications, CN = Russian Trusted Root CA
+notBefore=Jul 15 12:50:41 2024 GMT
+notAfter=Jul 19 12:50:41 2029 GMT

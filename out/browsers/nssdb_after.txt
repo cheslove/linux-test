@@ -1,0 +1,7 @@
+
+Certificate Nickname                                         Trust Attributes
+                                                             SSL,S/MIME,JAR/XPI
+
+mincifry_root                                                C,,  
+mincifry_sub                                                 C,,  
+mincifry_sub24                                               C,,  

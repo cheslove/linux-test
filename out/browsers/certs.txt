@@ -1,0 +1,43 @@
++ echo '== fstec.ru'
+== fstec.ru
++ echo
++ timeout 20 openssl s_client -connect fstec.ru:443 -servername fstec.ru
++ grep -E 'verify return|Verify return code|depth'
++ echo
++ timeout 20 openssl s_client -connect fstec.ru:443 -servername fstec.ru
++ openssl x509 -noout -subject -issuer -dates
+Could not read certificate from <stdin>
+Unable to load certificate
++ timeout 30 curl -sS -o /dev/null -w 'curl http_code=%{http_code} ssl_verify=%{ssl_verify_result}\n' https://fstec.ru
++ echo '== cryptopro.ru'
+== cryptopro.ru
++ echo
++ timeout 20 openssl s_client -connect cryptopro.ru:443 -servername cryptopro.ru
++ grep -E 'verify return|Verify return code|depth'
+depth=2 OU = GlobalSign Root CA - R3, O = GlobalSign, CN = GlobalSign
+verify return:1
+depth=1 C = BE, O = GlobalSign nv-sa, CN = GlobalSign RSA OV SSL CA 2018
+verify return:1
+depth=0 C = RU, ST = Moscow, L = Moscow, O = Crypto-Pro LLC, CN = *.cryptopro.ru
+verify return:1
+    Verify return code: 0 (ok)
++ echo
++ timeout 20 openssl s_client -connect cryptopro.ru:443 -servername cryptopro.ru
++ openssl x509 -noout -subject -issuer -dates
+subject=C = RU, ST = Moscow, L = Moscow, O = Crypto-Pro LLC, CN = *.cryptopro.ru
+issuer=C = BE, O = GlobalSign nv-sa, CN = GlobalSign RSA OV SSL CA 2018
+notBefore=Mar 11 09:03:40 2026 GMT
+notAfter=Apr 12 09:03:39 2027 GMT
++ timeout 30 curl -sS -o /dev/null -w 'curl http_code=%{http_code} ssl_verify=%{ssl_verify_result}\n' https://cryptopro.ru
+curl http_code=200 ssl_verify=0
++ echo '== www.gosuslugi.ru'
+== www.gosuslugi.ru
++ echo
++ timeout 20 openssl s_client -connect www.gosuslugi.ru:443 -servername www.gosuslugi.ru
++ grep -E 'verify return|Verify return code|depth'
++ timeout 20 openssl s_client -connect www.gosuslugi.ru:443 -servername www.gosuslugi.ru
++ echo
++ openssl x509 -noout -subject -issuer -dates
+Could not read certificate from <stdin>
+Unable to load certificate
++ timeout 30 curl -sS -o /dev/null -w 'curl http_code=%{http_code} ssl_verify=%{ssl_verify_result}\n' https://www.gosuslugi.ru

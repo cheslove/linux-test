@@ -1,0 +1,41 @@
++ echo '== versions'
+== versions
++ ls /opt
+actionarchivecache
+az
+chromium-gost
+containerd
+google
+hca
+hostedtoolcache
+microsoft
+pipx
+pipx_bin
+post-generation
+primer
+runner-cache
++ which firefox chromium-gost chromium-gost-stable yandex-browser google-chrome
+/usr/bin/firefox
+/usr/bin/chromium-gost
+/usr/bin/chromium-gost-stable
+/usr/bin/google-chrome
++ timeout 20 firefox --version
+[4708] Sandbox: CanCreateUserNamespace() unshare(CLONE_NEWPID): EPERM
+Mozilla Firefox 160.0
++ dpkg -l
++ grep -i -E 'chromium-gost|yandex|firefox'
+ii  chromium-gost-stable                   156.0.8078.100-1                                 amd64        Chromium browser with GOST cryptography support
+ii  firefox                                160.0+build1-0ubuntu0.24.04.1~mt1                amd64        Safe and easy web browser from Mozilla
+ii  xul-ext-ubufox                         3.4-0ubuntu1.17.10.4                             all          Ubuntu modifications for Firefox
++ dpkg -L chromium-gost-stable
++ grep -E 'bin/|/chrome$'
+/opt/chromium-gost/chrome
+/usr/bin/chromium-gost-stable
+CG=/usr/bin/chromium-gost-stable YB= FF=/usr/bin/firefox
++ google-chrome --version
+Google Chrome 157.0.8103.50 
++ chromium-gost --version
+Chromium-Gost 156.0.8078.100 stable
++ firefox --version
+[9739] Sandbox: CanCreateUserNamespace() unshare(CLONE_NEWPID): EPERM
+Mozilla Firefox 160.0
