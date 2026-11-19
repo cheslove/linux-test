@@ -1,0 +1,19 @@
+myoffice-standard-home-edition
+onlyoffice
+r7-office
+et
+libreoffice
+loffice
+myoffice-presentation-home-edition
+myoffice-spreadsheet-home-edition
+myoffice-text-home-edition
+onlyoffice-desktopeditors
+r7-office
+r7-office-desktopeditors
+r7-office-imageviewer
+r7-office-videoplayer
+soffice
+wpp
+wps
+wpspdf
+myoffice: myoffice-standard-home-edition myoffice-presentation-home-edition myoffice-spreadsheet-home-edition myoffice-text-home-edition 

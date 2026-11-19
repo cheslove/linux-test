@@ -1,0 +1,637 @@
++ cat /etc/os-release
++ cat /etc/apt/sources.list /etc/apt/sources.list.d/alt.list /etc/apt/sources.list.d/heanet.list /etc/apt/sources.list.d/ipsl.list /etc/apt/sources.list.d/yandex.list
++ rm -f /etc/apt/sources.list.d/alt.list /etc/apt/sources.list.d/heanet.list /etc/apt/sources.list.d/ipsl.list /etc/apt/sources.list.d/yandex.list
++ cat
++ for i in 1 2 3
++ timeout 900 apt-get update
++ grep -q 'noarch/classic pkglist' /w/out/office/apt_update.txt
++ break
++ ls -la /var/lib/apt/lists/
++ timeout 900 apt-get dist-upgrade -y -q
++ echo 'dist-upgrade exit=0'
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q eepm
++ echo 'eepm exit=0'
++ tail -3 /tmp/inst_eepm.log
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q wget
++ echo 'wget exit=0'
++ tail -3 /tmp/inst_wget.log
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q curl
++ echo 'curl exit=0'
++ tail -3 /tmp/inst_curl.log
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q fonts-ttf-dejavu
++ echo 'fonts-ttf-dejavu exit=0'
++ tail -3 /tmp/inst_fonts-ttf-dejavu.log
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q fonts-ttf-liberation
++ echo 'fonts-ttf-liberation exit=0'
++ tail -3 /tmp/inst_fonts-ttf-liberation.log
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q LibreOffice
++ echo 'LibreOffice exit=0'
++ tail -3 /tmp/inst_LibreOffice.log
++ for p in eepm wget curl fonts-ttf-dejavu fonts-ttf-liberation LibreOffice LibreOffice-langpack-ru
++ timeout 900 apt-get install -y -q LibreOffice-langpack-ru
++ echo 'LibreOffice-langpack-ru exit=0'
++ tail -3 /tmp/inst_LibreOffice-langpack-ru.log
++ for p in onlyoffice r7-office wpsoffice myoffice
++ echo '=== epm play onlyoffice'
++ timeout 600 epm play --auto onlyoffice
++ echo exit=0
++ for p in onlyoffice r7-office wpsoffice myoffice
++ echo '=== epm play r7-office'
++ timeout 600 epm play --auto r7-office
++ echo exit=0
++ for p in onlyoffice r7-office wpsoffice myoffice
++ echo '=== epm play wpsoffice'
++ timeout 600 epm play --auto wpsoffice
++ echo exit=0
++ for p in onlyoffice r7-office wpsoffice myoffice
++ echo '=== epm play myoffice'
++ timeout 600 epm play --auto myoffice
++ echo exit=0
++ timeout 120 epm play --list-all
++ ls /usr/bin /opt
++ grep -i -E 'office|wps|^et$|wpp|r7|myoffice|libre|soffice'
++ rpm -qa
++ sort
++ grep -i -E 'office|wps|r7|libre'
++ export DISPLAY=:99
++ DISPLAY=:99
++ cd /w/files
+++ command -v libreoffice
++ LO=/usr/bin/libreoffice
++ '[' -n /usr/bin/libreoffice ']'
++ for f in *
++ openf libreoffice_test_document_docx '/usr/bin/libreoffice --norestore' test_document.docx soffice
++ P=123435
++ sleep 35
++ timeout 60 /usr/bin/libreoffice --norestore test_document.docx
++ shot libreoffice_test_document_docx
++ touch /w/out/office/req_libreoffice_test_document_docx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_docx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_docx ']'
++ break
++ kill 123435
++ pkill -f soffice
++ sleep 3
++ for f in *
++ openf libreoffice_test_document_odt '/usr/bin/libreoffice --norestore' test_document.odt soffice
++ P=123511
++ sleep 35
++ timeout 60 /usr/bin/libreoffice --norestore test_document.odt
++ shot libreoffice_test_document_odt
++ touch /w/out/office/req_libreoffice_test_document_odt
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_odt ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_odt ']'
++ break
++ kill 123511
++ pkill -f soffice
++ sleep 3
++ for f in *
++ openf libreoffice_test_document_pdf '/usr/bin/libreoffice --norestore' test_document.pdf soffice
++ P=123572
++ sleep 35
++ timeout 60 /usr/bin/libreoffice --norestore test_document.pdf
++ shot libreoffice_test_document_pdf
++ touch /w/out/office/req_libreoffice_test_document_pdf
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_pdf ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_pdf ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_document_pdf ']'
++ break
++ kill 123572
++ pkill -f soffice
++ sleep 3
++ for f in *
++ openf libreoffice_test_presentation_odp '/usr/bin/libreoffice --norestore' test_presentation.odp soffice
++ P=123632
++ timeout 60 /usr/bin/libreoffice --norestore test_presentation.odp
++ sleep 35
++ shot libreoffice_test_presentation_odp
++ touch /w/out/office/req_libreoffice_test_presentation_odp
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_presentation_odp ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_presentation_odp ']'
++ break
++ kill 123632
++ pkill -f soffice
++ sleep 3
++ for f in *
++ openf libreoffice_test_presentation_pptx '/usr/bin/libreoffice --norestore' test_presentation.pptx soffice
++ P=123692
++ sleep 35
++ timeout 60 /usr/bin/libreoffice --norestore test_presentation.pptx
++ shot libreoffice_test_presentation_pptx
++ touch /w/out/office/req_libreoffice_test_presentation_pptx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_presentation_pptx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_presentation_pptx ']'
++ break
++ kill 123692
++ pkill -f soffice
++ sleep 3
++ for f in *
++ openf libreoffice_test_table_ods '/usr/bin/libreoffice --norestore' test_table.ods soffice
++ P=123770
++ sleep 35
++ timeout 60 /usr/bin/libreoffice --norestore test_table.ods
++ shot libreoffice_test_table_ods
++ touch /w/out/office/req_libreoffice_test_table_ods
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_table_ods ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_table_ods ']'
++ break
++ kill 123770
++ pkill -f soffice
++ sleep 3
++ for f in *
++ openf libreoffice_test_table_xlsx '/usr/bin/libreoffice --norestore' test_table.xlsx soffice
++ P=123828
++ sleep 35
++ timeout 60 /usr/bin/libreoffice --norestore test_table.xlsx
++ shot libreoffice_test_table_xlsx
++ touch /w/out/office/req_libreoffice_test_table_xlsx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_table_xlsx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_libreoffice_test_table_xlsx ']'
++ break
++ kill 123828
++ pkill -f soffice
++ sleep 3
+++ command -v onlyoffice-desktopeditors
++ OO=/usr/bin/onlyoffice-desktopeditors
++ '[' -n /usr/bin/onlyoffice-desktopeditors ']'
++ for f in *
++ openf onlyoffice_test_document_docx /usr/bin/onlyoffice-desktopeditors /w/files/test_document.docx DesktopEditors
++ P=123887
++ sleep 35
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_document.docx
+/w/office.sh: line 28: 123887 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_document_docx
++ touch /w/out/office/req_onlyoffice_test_document_docx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_docx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_docx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_docx ']'
++ break
++ kill 123887
++ pkill -f DesktopEditors
++ sleep 3
++ for f in *
++ openf onlyoffice_test_document_odt /usr/bin/onlyoffice-desktopeditors /w/files/test_document.odt DesktopEditors
++ P=123896
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_document.odt
++ sleep 35
+/w/office.sh: line 28: 123896 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_document_odt
++ touch /w/out/office/req_onlyoffice_test_document_odt
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_odt ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_odt ']'
++ break
++ kill 123896
++ pkill -f DesktopEditors
++ sleep 3
++ for f in *
++ openf onlyoffice_test_document_pdf /usr/bin/onlyoffice-desktopeditors /w/files/test_document.pdf DesktopEditors
++ P=123904
++ sleep 35
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_document.pdf
+/w/office.sh: line 28: 123904 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_document_pdf
++ touch /w/out/office/req_onlyoffice_test_document_pdf
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_pdf ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_document_pdf ']'
++ break
++ kill 123904
++ pkill -f DesktopEditors
++ sleep 3
++ for f in *
++ openf onlyoffice_test_presentation_odp /usr/bin/onlyoffice-desktopeditors /w/files/test_presentation.odp DesktopEditors
++ P=123912
++ sleep 35
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_presentation.odp
+/w/office.sh: line 28: 123912 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_presentation_odp
++ touch /w/out/office/req_onlyoffice_test_presentation_odp
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_presentation_odp ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_presentation_odp ']'
++ break
++ kill 123912
++ pkill -f DesktopEditors
++ sleep 3
++ for f in *
++ openf onlyoffice_test_presentation_pptx /usr/bin/onlyoffice-desktopeditors /w/files/test_presentation.pptx DesktopEditors
++ P=123920
++ sleep 35
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_presentation.pptx
+/w/office.sh: line 28: 123920 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_presentation_pptx
++ touch /w/out/office/req_onlyoffice_test_presentation_pptx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_presentation_pptx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_presentation_pptx ']'
++ break
++ kill 123920
++ pkill -f DesktopEditors
++ sleep 3
++ for f in *
++ openf onlyoffice_test_table_ods /usr/bin/onlyoffice-desktopeditors /w/files/test_table.ods DesktopEditors
++ P=123928
++ sleep 35
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_table.ods
+/w/office.sh: line 28: 123928 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_table_ods
++ touch /w/out/office/req_onlyoffice_test_table_ods
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_table_ods ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_table_ods ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_table_ods ']'
++ break
++ kill 123928
++ pkill -f DesktopEditors
++ sleep 3
++ for f in *
++ openf onlyoffice_test_table_xlsx /usr/bin/onlyoffice-desktopeditors /w/files/test_table.xlsx DesktopEditors
++ P=123937
++ sleep 35
++ timeout 60 /usr/bin/onlyoffice-desktopeditors /w/files/test_table.xlsx
+/w/office.sh: line 28: 123937 Trace/breakpoint trap   timeout 60 $2 "$3" > /dev/null 2>&1
++ shot onlyoffice_test_table_xlsx
++ touch /w/out/office/req_onlyoffice_test_table_xlsx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_table_xlsx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_onlyoffice_test_table_xlsx ']'
++ break
++ kill 123937
++ pkill -f DesktopEditors
++ sleep 3
+++ command -v r7-office-desktopeditors
++ R7=/usr/bin/r7-office-desktopeditors
++ '[' -n /usr/bin/r7-office-desktopeditors ']'
++ for f in *
++ openf r7_test_document_docx /usr/bin/r7-office-desktopeditors /w/files/test_document.docx r7
++ P=123946
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_document.docx
++ shot r7_test_document_docx
++ touch /w/out/office/req_r7_test_document_docx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_document_docx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_document_docx ']'
++ break
++ kill 123946
++ pkill -f r7
++ sleep 3
++ for f in *
++ openf r7_test_document_odt /usr/bin/r7-office-desktopeditors /w/files/test_document.odt r7
++ P=123973
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_document.odt
++ shot r7_test_document_odt
++ touch /w/out/office/req_r7_test_document_odt
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_document_odt ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_document_odt ']'
++ break
++ kill 123973
++ pkill -f r7
++ sleep 3
++ for f in *
++ openf r7_test_document_pdf /usr/bin/r7-office-desktopeditors /w/files/test_document.pdf r7
++ P=124000
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_document.pdf
++ shot r7_test_document_pdf
++ touch /w/out/office/req_r7_test_document_pdf
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_document_pdf ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_document_pdf ']'
++ break
++ kill 124000
++ pkill -f r7
++ sleep 3
++ for f in *
++ openf r7_test_presentation_odp /usr/bin/r7-office-desktopeditors /w/files/test_presentation.odp r7
++ P=124027
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_presentation.odp
++ shot r7_test_presentation_odp
++ touch /w/out/office/req_r7_test_presentation_odp
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_presentation_odp ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_presentation_odp ']'
++ break
++ kill 124027
++ pkill -f r7
++ sleep 3
++ for f in *
++ openf r7_test_presentation_pptx /usr/bin/r7-office-desktopeditors /w/files/test_presentation.pptx r7
++ P=124054
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_presentation.pptx
++ shot r7_test_presentation_pptx
++ touch /w/out/office/req_r7_test_presentation_pptx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_presentation_pptx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_presentation_pptx ']'
++ break
++ kill 124054
++ pkill -f r7
++ sleep 3
++ for f in *
++ openf r7_test_table_ods /usr/bin/r7-office-desktopeditors /w/files/test_table.ods r7
++ P=124081
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_table.ods
++ shot r7_test_table_ods
++ touch /w/out/office/req_r7_test_table_ods
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_table_ods ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_table_ods ']'
++ break
++ kill 124081
++ pkill -f r7
++ sleep 3
++ for f in *
++ openf r7_test_table_xlsx /usr/bin/r7-office-desktopeditors /w/files/test_table.xlsx r7
++ P=124108
++ sleep 35
++ timeout 60 /usr/bin/r7-office-desktopeditors /w/files/test_table.xlsx
++ shot r7_test_table_xlsx
++ touch /w/out/office/req_r7_test_table_xlsx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_table_xlsx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_r7_test_table_xlsx ']'
++ break
++ kill 124108
++ pkill -f r7
++ sleep 3
++ for pair in "wps:docx odt" "et:xlsx ods" "wpp:pptx odp" "wpspdf:pdf"
++ b=wps
++ command -v wps
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_document_docx wps /w/files/test_document.docx wps
++ P=124135
++ sleep 35
++ timeout 60 wps /w/files/test_document.docx
++ shot wps_test_document_docx
++ touch /w/out/office/req_wps_test_document_docx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_docx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_docx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_docx ']'
++ break
++ kill 124135
++ pkill -f wps
++ sleep 3
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_document_odt wps /w/files/test_document.odt wps
++ P=124179
++ sleep 35
++ timeout 60 wps /w/files/test_document.odt
++ shot wps_test_document_odt
++ touch /w/out/office/req_wps_test_document_odt
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_odt ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_odt ']'
++ break
++ kill 124179
++ pkill -f wps
++ sleep 3
++ for pair in "wps:docx odt" "et:xlsx ods" "wpp:pptx odp" "wpspdf:pdf"
++ b=et
++ command -v et
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_table_xlsx et /w/files/test_table.xlsx wps
++ P=124220
++ sleep 35
++ timeout 60 et /w/files/test_table.xlsx
++ shot wps_test_table_xlsx
++ touch /w/out/office/req_wps_test_table_xlsx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_table_xlsx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_table_xlsx ']'
++ break
++ kill 124220
++ pkill -f wps
++ sleep 3
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_table_ods et /w/files/test_table.ods wps
++ P=124261
++ timeout 60 et /w/files/test_table.ods
++ sleep 35
++ shot wps_test_table_ods
++ touch /w/out/office/req_wps_test_table_ods
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_table_ods ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_table_ods ']'
++ break
++ kill 124261
++ pkill -f wps
++ sleep 3
++ for pair in "wps:docx odt" "et:xlsx ods" "wpp:pptx odp" "wpspdf:pdf"
++ b=wpp
++ command -v wpp
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_presentation_pptx wpp /w/files/test_presentation.pptx wps
++ P=124302
++ sleep 35
++ timeout 60 wpp /w/files/test_presentation.pptx
++ shot wps_test_presentation_pptx
++ touch /w/out/office/req_wps_test_presentation_pptx
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_presentation_pptx ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_presentation_pptx ']'
++ break
++ kill 124302
++ pkill -f wps
++ sleep 3
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_presentation_odp wpp /w/files/test_presentation.odp wps
++ P=124343
++ sleep 35
++ timeout 60 wpp /w/files/test_presentation.odp
++ shot wps_test_presentation_odp
++ touch /w/out/office/req_wps_test_presentation_odp
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_presentation_odp ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_presentation_odp ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_presentation_odp ']'
++ break
++ kill 124343
++ pkill -f wps
++ sleep 3
++ for pair in "wps:docx odt" "et:xlsx ods" "wpp:pptx odp" "wpspdf:pdf"
++ b=wpspdf
++ command -v wpspdf
++ for e in ${pair#*:}
++ for f in *.$e
++ openf wps_test_document_pdf wpspdf /w/files/test_document.pdf wps
++ P=124385
++ sleep 35
++ timeout 60 wpspdf /w/files/test_document.pdf
++ shot wps_test_document_pdf
++ touch /w/out/office/req_wps_test_document_pdf
+++ seq 1 20
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_pdf ']'
++ sleep 1
++ for i in $(seq 1 20)
++ '[' -e /w/out/office/req_wps_test_document_pdf ']'
++ break
++ kill 124385
++ pkill -f wps
++ sleep 3
+++ ls /usr/bin /opt
+++ grep -i myoffice
+++ tr '\n' ' '
++ MO='myoffice-standard-home-edition myoffice-presentation-home-edition myoffice-spreadsheet-home-edition myoffice-text-home-edition '
++ echo 'myoffice: myoffice-standard-home-edition myoffice-presentation-home-edition myoffice-spreadsheet-home-edition myoffice-text-home-edition '
++ ls -la /w/out/office
+total 3400
+drwxrwxrwx 2 1001 1001    4096 Nov 19 11:32 .
+drwxrwxrwx 3 1001 1001    4096 Nov 19 10:56 ..
+-rw-r--r-- 1 root root    1291 Nov 19 10:57 apt.txt
+-rw-r--r-- 1 root root    9651 Nov 19 10:56 apt_distupgrade.txt
+-rw-r--r-- 1 root root    1403 Nov 19 10:56 apt_update.txt
+-rw-r--r-- 1 root root     437 Nov 19 11:32 bins.txt
+-rw-r--r-- 1 root root   27010 Nov 19 11:13 epm_play_list.txt
+-rw-r--r-- 1 root root 2180652 Nov 19 11:13 install.log
+-rw-r--r-- 1 1001 1001  141016 Nov 19 11:14 libreoffice_test_document_docx.png
+-rw-r--r-- 1 1001 1001   76978 Nov 19 11:15 libreoffice_test_document_odt.png
+-rw-r--r-- 1 1001 1001   74122 Nov 19 11:15 libreoffice_test_document_pdf.png
+-rw-r--r-- 1 1001 1001   85801 Nov 19 11:16 libreoffice_test_presentation_odp.png
+-rw-r--r-- 1 1001 1001   85766 Nov 19 11:17 libreoffice_test_presentation_pptx.png
+-rw-r--r-- 1 1001 1001   76598 Nov 19 11:17 libreoffice_test_table_ods.png
+-rw-r--r-- 1 1001 1001   75370 Nov 19 11:18 libreoffice_test_table_xlsx.png
+-rw-r--r-- 1 root root   19520 Nov 19 11:32 log.txt
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:19 onlyoffice_test_document_docx.png
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:19 onlyoffice_test_document_odt.png
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:20 onlyoffice_test_document_pdf.png
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:21 onlyoffice_test_presentation_odp.png
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:21 onlyoffice_test_presentation_pptx.png
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:22 onlyoffice_test_table_ods.png
+-rw-r--r-- 1 1001 1001    3470 Nov 19 11:22 onlyoffice_test_table_xlsx.png
+-rw-r--r-- 1 root root     220 Nov 19 10:56 os.txt
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:23 r7_test_document_docx.png
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:24 r7_test_document_odt.png
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:24 r7_test_document_pdf.png
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:25 r7_test_presentation_odp.png
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:26 r7_test_presentation_pptx.png
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:26 r7_test_table_ods.png
+-rw-r--r-- 1 1001 1001    9910 Nov 19 11:27 r7_test_table_xlsx.png
+-rw-r--r-- 1 root root     542 Nov 19 11:13 rpms.txt
+-rw-r--r-- 1 root root    3408 Nov 19 10:56 sources_before.txt
+-rw-r--r-- 1 1001 1001   61680 Nov 19 11:28 wps_test_document_docx.png
+-rw-r--r-- 1 1001 1001   61680 Nov 19 11:28 wps_test_document_odt.png
+-rw-r--r-- 1 1001 1001   60770 Nov 19 11:32 wps_test_document_pdf.png
+-rw-r--r-- 1 1001 1001   61680 Nov 19 11:31 wps_test_presentation_odp.png
+-rw-r--r-- 1 1001 1001   61680 Nov 19 11:30 wps_test_presentation_pptx.png
+-rw-r--r-- 1 1001 1001   61680 Nov 19 11:30 wps_test_table_ods.png
+-rw-r--r-- 1 1001 1001   61680 Nov 19 11:29 wps_test_table_xlsx.png

@@ -1,0 +1,29 @@
+dist-upgrade exit=0
+eepm exit=0
+4: less-633-alt1                        ################################# [ 80%]
+5: eepm-3.64.35-alt1                    ################################# [100%]
+Done.
+wget exit=0
+ 9: libssl3-3.5.7-alt2                  ################################# [ 90%]
+10: wget-1.25.0-alt6                    ################################# [100%]
+Done.
+curl exit=0
+18: libcurl-8.23.0-alt1                 ################################# [ 95%]
+19: curl-8.23.0-alt1                    ################################# [100%]
+Done.
+fonts-ttf-dejavu exit=0
+Updating fonts cache: [ DONE ]
+17: fonts-ttf-dejavu-2.37-alt2          ################################# [100%]
+Done.
+fonts-ttf-liberation exit=0
+1: fonts-ttf-liberation-narrow-1.07.4-alt2 ################################# [ 50%]
+2: fonts-ttf-liberation-2.1.5-alt1      ################################# [100%]
+Done.
+LibreOffice exit=0
+241: libreoffice-extensions-26.8.2.2-alt1 ################################# [100%]
+242: libreoffice-26.8.2.2-alt1          ################################# [100%]
+Done.
+LibreOffice-langpack-ru exit=0
+4: hunspell-ru-lebedev-0.99g5-alt15     ################################# [ 80%]
+5: libreoffice-langpack-ru-26.8.2.2-alt1 ################################# [100%]
+Done.

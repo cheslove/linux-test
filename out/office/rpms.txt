@@ -1,0 +1,14 @@
+libreadline8-8.2.10-alt1.x86_64
+libredland-1.0.17-alt5.x86_64
+libreoffice-26.8.2.2-alt1.x86_64
+libreoffice-core-26.8.2.2-alt1.x86_64
+libreoffice-extensions-26.8.2.2-alt1.x86_64
+libreoffice-langpack-ru-26.8.2.2-alt1.x86_64
+librepository-1.1.3-alt2_34jpp11.noarch
+librevenge-0.0.6-alt1.x86_64
+libstaroffice-0.0.7-alt1.x86_64
+libwps-0.4.12-alt2.x86_64
+myoffice-standard-home-edition-26.3.0_h-229.x86_64
+onlyoffice-desktopeditors-10.0.0-epm1.repacked.170.x86_64
+r7-office-2026.3.1-3993.p8.x86_64
+wps-office-11.1.0.11723.XA-epm1.repacked.2.x86_64

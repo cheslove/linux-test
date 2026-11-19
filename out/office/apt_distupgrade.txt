@@ -1,0 +1,113 @@
+Reading Package Lists...
+Building Dependency Tree...
+The following packages will be upgraded
+  alt-gpgkeys       libaudit1     librpm7             rpm
+  altlinux-repos    libgcrypt20   libtasn1            shadow-convert
+  apt-conf-branch   libgnutls30   libtic6             shadow-utils
+  common-licenses   libgpg-error  libtinfo6           terminfo
+  glibc-core        libiptables   libudev1            termutils
+  glibc-preinstall  libmnl        pam-config          vim-minimal
+  gnupg             libncursesw6  pam-config-control
+  libaudit-common   libp11-kit    perl-base
+30 upgraded, 0 newly installed, 0 removed and 0 not upgraded.
+Need to get 11.8MB of archives.
+After unpacking 1318kB of additional disk space will be used.
+Get:1 http://mirror.yandex.ru p11/branch/noarch/classic alt-gpgkeys 0.8.146-alt1:p11+430665.100.1.1@1787567287 [591kB]
+Get:2 http://mirror.yandex.ru p11/branch/noarch/classic common-licenses 3.29.0-alt1:p11+434193.100.2.2@1790914544 [522kB]
+Get:3 http://mirror.yandex.ru p11/branch/x86_64/classic glibc-preinstall 6:2.38.0.223.f053ff-alt1.p11.1:p11+422743.100.3.2@1782898848 [281kB]
+Get:4 http://mirror.yandex.ru p11/branch/x86_64/classic glibc-core 6:2.38.0.223.f053ff-alt1.p11.1:p11+422743.100.3.2@1782898848 [1611kB]
+Get:5 http://mirror.yandex.ru p11/branch/x86_64/classic perl-base 1:5.38.4-alt1.p11:p11+415674.400.4.1@1776697020 [1996kB]
+Get:6 http://mirror.yandex.ru p11/branch/x86_64/classic gnupg 1.4.23-alt6:p11+428322.100.1.1@1785840441 [1270kB]
+Get:7 http://mirror.yandex.ru p11/branch/x86_64/classic libgpg-error 1.61-alt2:p11+429274.100.10.1@1791562137 [203kB]
+Get:8 http://mirror.yandex.ru p11/branch/x86_64/classic libgcrypt20 1.12.2-alt3:p11+429274.200.10.1@1791562269 [599kB]
+Get:9 http://mirror.yandex.ru p11/branch/x86_64/classic librpm7 4.13.0.1-alt45:p11+418689.100.2.1@1781016121 [353kB]
+Get:10 http://mirror.yandex.ru p11/branch/x86_64/classic rpm 4.13.0.1-alt45:p11+418689.100.2.1@1781016121 [437kB]
+Get:11 http://mirror.yandex.ru p11/branch/noarch/classic libaudit-common 4.2.1-alt1:p11+426513.200.2.1@1785397221 [20.8kB]
+Get:12 http://mirror.yandex.ru p11/branch/x86_64/classic libaudit1 4.2.1-alt1:p11+426513.200.2.1@1785397221 [54.8kB]
+Get:13 http://mirror.yandex.ru p11/branch/x86_64/classic shadow-convert 1:4.17.4-alt4:p11+434070.200.2.1@1790187847 [57.4kB]
+Get:14 http://mirror.yandex.ru p11/branch/x86_64/classic shadow-utils 1:4.17.4-alt4:p11+434070.200.2.1@1790187847 [490kB]
+Get:15 http://mirror.yandex.ru p11/branch/noarch/classic pam-config-control 1.10.0-alt0.p11.2:p11+405959.20.5.1@1781550898 [12.4kB]
+Get:16 http://mirror.yandex.ru p11/branch/noarch/classic pam-config 1.10.0-alt0.p11.2:p11+405959.20.5.1@1781550898 [21.9kB]
+Get:17 http://mirror.yandex.ru p11/branch/noarch/classic altlinux-repos 11.0-alt5:p11+428980.100.1.1@1786275929 [9379B]
+Get:18 http://mirror.yandex.ru p11/branch/x86_64/classic apt-conf-branch 11.0-alt2:p11+418609.200.3.1@1780670145 [14.3kB]
+Get:19 http://mirror.yandex.ru p11/branch/x86_64/classic libp11-kit 1:0.26.5-alt1:p11+429276.100.1.1@1786546787 [268kB]
+Get:20 http://mirror.yandex.ru p11/branch/x86_64/classic libtasn1 4.21.0-alt2:p11+420752.100.2.1@1782199433 [53.6kB]
+Get:21 http://mirror.yandex.ru p11/branch/x86_64/classic libgnutls30 3.8.13-alt1:p11+417121.100.2.1@1778247655 [1378kB]
+Get:22 http://mirror.yandex.ru p11/branch/x86_64/classic libiptables 1.8.13-alt1:p11+426347.100.1.1@1784734374 [50.9kB]
+Get:23 http://mirror.yandex.ru p11/branch/x86_64/classic libmnl 1.0.5-alt2.d24c886:p11+431660.100.3.1@1789132452 [21.5kB]
+Get:24 http://mirror.yandex.ru p11/branch/x86_64/classic termutils 6.5.20250705-alt1:p11+414777.100.1.1@1775807998 [100kB]
+Get:25 http://mirror.yandex.ru p11/branch/x86_64/classic libtic6 6.5.20250705-alt1:p11+414777.100.1.1@1775807998 [45.7kB]
+Get:26 http://mirror.yandex.ru p11/branch/x86_64/classic libncursesw6 6.5.20250705-alt1:p11+414777.100.1.1@1775807998 [151kB]
+Get:27 http://mirror.yandex.ru p11/branch/noarch/classic terminfo 6.5.20250705-alt1:p11+414777.100.1.1@1775807998 [91.6kB]
+Get:28 http://mirror.yandex.ru p11/branch/x86_64/classic libtinfo6 6.5.20250705-alt1:p11+414777.100.1.1@1775807998 [78.0kB]
+Get:29 http://mirror.yandex.ru p11/branch/x86_64/classic libudev1 1:258.9-alt1:p11+424648.100.13.1@1791305222 [146kB]
+Get:30 http://mirror.yandex.ru p11/branch/x86_64/classic vim-minimal 4:9.2.1067-alt1:p11+432562.100.1.1@1789141908 [851kB]
+Fetched 11.8MB in 2s (4231kB/s)
+Committing changes...
+Preparing...                            ################################# [100%]
+Updating / installing...
+ 1: terminfo-6.5.20250705-alt1          ################################# [  2%]
+ 2: altlinux-repos-11.0-alt5            ################################# [  3%]
+ 3: pam-config-control-1.10.0-alt0.p11.2 ################################# [  5%]
+ 4: pam-config-1.10.0-alt0.p11.2        ################################# [  7%]
+ 5: libaudit-common-4.2.1-alt1          ################################# [  8%]
+ 6: glibc-preinstall-6:2.38.0.223.f053ff-alt1.p11.1 ################################# [ 10%]
+ 7: glibc-core-6:2.38.0.223.f053ff-alt1.p11.1 ################################# [ 12%]
+ 8: libtinfo6-6.5.20250705-alt1         ################################# [ 13%]
+ 9: libaudit1-4.2.1-alt1                ################################# [ 15%]
+10: shadow-convert-1:4.17.4-alt4        ################################# [ 17%]
+11: libtic6-6.5.20250705-alt1           ################################# [ 18%]
+12: libgpg-error-1.61-alt2              ################################# [ 20%]
+13: libgcrypt20-1.12.2-alt3             ################################# [ 22%]
+14: librpm7-4.13.0.1-alt45              ################################# [ 23%]
+15: rpm-4.13.0.1-alt45                  ################################# [ 25%]
+16: shadow-utils-1:4.17.4-alt4          ################################# [ 27%]
+17: libp11-kit-1:0.26.5-alt1            ################################# [ 28%]
+18: libtasn1-4.21.0-alt2                ################################# [ 30%]
+19: libgnutls30-3.8.13-alt1             ################################# [ 32%]
+20: gnupg-1.4.23-alt6                   ################################# [ 33%]
+21: termutils-6.5.20250705-alt1         ################################# [ 35%]
+22: libncursesw6-6.5.20250705-alt1      ################################# [ 37%]
+23: vim-minimal-4:9.2.1067-alt1         ################################# [ 38%]
+24: perl-base-1:5.38.4-alt1.p11         ################################# [ 40%]
+25: libiptables-1.8.13-alt1             ################################# [ 42%]
+26: libmnl-1.0.5-alt2.d24c886           ################################# [ 43%]
+27: libudev1-1:258.9-alt1               ################################# [ 45%]
+28: apt-conf-branch-11.0-alt2           ################################# [ 47%]
+29: common-licenses-3.29.0-alt1         ################################# [ 48%]
+30: alt-gpgkeys-0.8.146-alt1            ################################# [ 50%]
+Cleaning up / removing...
+31: libgnutls30-3.8.12-alt1             ################################# [ 52%]
+32: vim-minimal-4:9.1.1264-alt1         ################################# [ 53%]
+33: libncursesw6-6.3.20220618-alt4      ################################# [ 55%]
+34: termutils-6.3.20220618-alt4         ################################# [ 57%]
+35: libtic6-6.3.20220618-alt4           ################################# [ 58%]
+36: libtinfo6-6.3.20220618-alt4         ################################# [ 60%]
+37: gnupg-1.4.23-alt4                   ################################# [ 62%]
+38: shadow-utils-1:4.17.4-alt2          ################################# [ 63%]
+39: shadow-convert-1:4.17.4-alt2        ################################# [ 65%]
+40: libaudit1-4.1.3-alt1                ################################# [ 67%]
+41: rpm-4.13.0.1-alt40                  ################################# [ 68%]
+42: librpm7-4.13.0.1-alt40              ################################# [ 70%]
+43: libgcrypt20-1.10.2-alt2             ################################# [ 72%]
+44: libgpg-error-1.47-alt1              ################################# [ 73%]
+45: pam-config-1.9.1-alt1               ################################# [ 75%]
+46: libp11-kit-1:0.25.10-alt2           ################################# [ 77%]
+47: libtasn1-4.21.0-alt1                ################################# [ 78%]
+48: libudev1-1:257.9-alt1               ################################# [ 80%]
+49: libmnl-1.0.5-alt1                   ################################# [ 82%]
+50: libiptables-1.8.10-alt1             ################################# [ 83%]
+51: apt-conf-branch-11.0-alt1           #############warning: file /etc/apt/sources.list.d/heanet.list: remove failed: No such file or directory
+#################### [ 85%]
+52: perl-base-1:5.38.4-alt1             ################################# [ 87%]
+53: glibc-core-6:2.38.0.123.650a0-alt1  ################################# [ 88%]
+54: glibc-preinstall-6:2.38.0.123.650a0-alt1 ################################# [ 90%]
+55: altlinux-repos-11.0-alt3            ################################# [ 92%]
+56: pam-config-control-1.9.1-alt1       ################################# [ 93%]
+57: libaudit-common-4.1.3-alt1          ################################# [ 95%]
+58: terminfo-6.3.20220618-alt4          ################################# [ 97%]
+59: common-licenses-3.27.0-alt1         ################################# [ 98%]
+60: alt-gpgkeys-0.8.137-alt1            ################################# [100%]
+Done.
+rebuilding database /var/lib/rpm started
+rebuilding database /var/lib/rpm finished

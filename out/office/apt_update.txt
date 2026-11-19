@@ -1,0 +1,21 @@
+Get:1 http://mirror.yandex.ru p11/branch/x86_64 release [4210B]
+Get:2 http://mirror.yandex.ru p11/branch/noarch release [2831B]
+Fetched 7041B in 0s (11.8kB/s)
+Get:1 http://mirror.yandex.ru p11/branch/x86_64/classic pkglist [29.8MB]
+Get:2 http://mirror.yandex.ru p11/branch/x86_64/classic release [137B]
+Get:3 http://mirror.yandex.ru p11/branch/noarch/classic pkglist [7990kB]
+Get:4 http://mirror.yandex.ru p11/branch/noarch/classic release [137B]
+Fetched 37.8MB in 4s (8308kB/s)
+Reading Package Lists...
+Building Dependency Tree...
+total 228864
+drwxr-xr-x 1 root root      4096 Nov 19 10:56 .
+drwxr-xr-x 1 root root      4096 Apr 13  2026 ..
+-rw-r----- 1 root root         0 Nov 19 10:56 lock
+-rw-r--r-- 1 root root  83375213 Nov 18 17:08 mirror.yandex.ru_altlinux_p11_branch_noarch_base_pkglist.classic
+-rw-r--r-- 1 root root      2030 Nov 18 17:08 mirror.yandex.ru_altlinux_p11_branch_noarch_base_release
+-rw-r--r-- 1 root root       137 Nov 18 17:08 mirror.yandex.ru_altlinux_p11_branch_noarch_base_release.classic
+-rw-r--r-- 1 root root 150941502 Nov 18 14:46 mirror.yandex.ru_altlinux_p11_branch_x86%5f64_base_pkglist.classic
+-rw-r--r-- 1 root root      3409 Nov 18 14:46 mirror.yandex.ru_altlinux_p11_branch_x86%5f64_base_release
+-rw-r--r-- 1 root root       137 Nov 18 14:46 mirror.yandex.ru_altlinux_p11_branch_x86%5f64_base_release.classic
+drwxr-xr-x 1 root root      4096 Nov 19 10:56 partial

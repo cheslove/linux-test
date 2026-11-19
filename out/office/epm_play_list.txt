@@ -1,0 +1,314 @@
+Available applications (for current arch x86_64):
+  1c-connect                - 1C Connect — Service & Help desk со встроенным удалённым доступом и мессенджером
+  64gram                    - 64Gram (unofficial Telegram Desktop)
+  affine                    - There can be more than Notion and Miro.AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use
+  aimp                      - AIMP (Wine based audio player) from the official site
+  aksusbd                   - Sentinel LDK daemon (HASP) from the official site
+  alivecolors               - AliveColors from the official site
+  alteroffice               - AlterOffice from the official site
+  android-studio            - The official Android IDE
+  angie                     - ANGIE (a web server, that was forked from nginx) from the official site
+  anilibrix                 - Anilibria desktop anime cinema for any of your computers
+  anydesk                   - AnyDesk from the official site
+  anytype                   - The everything app for those who celebrate trust & autonomy
+  arduino-ide               - The new major release of the Arduino IDE is faster and even more powerful!
+  assistant                 - Assistant (Ассистент) from the official site
+  audiorelay                - AudioRelay from the official site
+  ayugram                   - Desktop Telegram client with good customization and Ghost mode
+  balena-etcher             - Flash OS images to SD cards & USB drives, safely and easily
+  bastyon                   - Bastyon is a decentralized, open-source social network and video sharing platform.
+  bellsoft-java11-full      - BellSoft Liberica JDK is a build of OpenJDK that is tested and verified to be compliant with the Java SE specification using OpenJDK Technology Compatibility Kit test suite
+  betaflight-configurator   - Cross platform configuration tool for the Betaflight firmware.
+  bitrix24                  - Bitrix24 desktop client from the official site
+  bitwarden                 - Bitwarden desktop from the official site
+  bitwig-studio             - Bitwig Studio from the official site
+  blender                   - A fully integrated 3D graphics creation suite
+  brave                     - Brave browser from the official site
+  brew                      - The missing package manager for macOS (or Linux)
+  cascadeur                 - Cascadeur - a physics‑based 3D animation software
+  chatgpt-desktop           - Unofficial ChatGPT Desktop Application from the official site
+  chrome-remote-desktop     - Remote desktop support for google-chrome & chromium
+  chrome                    - The popular and trusted web browser by Google (Stable Channel) from the official site
+  chromium-gost             - Chromium with GOST support from the official site
+  clash-verge               - CClash Verge from the official site
+  clion                     - CLion - A cross-platform IDE for C and C++ from the official site
+  clipgrab                  - ClibGrab - A friendly downloader for YouTube and other sites from the official site
+  cnijfilter2               - IJ Printer Driver for Linux from the official site
+  cnrdrvcups-ufr2           - Canon UFR II Printer Driver for Linux from the official site
+  code                      - Visual Studio Code from the official site
+  codium                    - Codium from the official site
+  cstcadnavigator           - CST CAD Navigator from the official site
+  cuda-z                    - CUDA-Z from the official site
+  cups-drivers-katusham247  - Linux Print Driver for katusha m247 Printer
+  cursor                    - The AI-first Code Editor
+  datagrip                  - DataGrip - A powerful cross-platform tool for relational and NoSQL databases
+  dbeaver                   - DBeaver Community from the official site
+  deepseek-desktop          - Unofficial Web app for DeepSeek from the snapcraft
+  deltachat                 - Delta Chat is a decentralized and secure messenger app
+  discord                   - Discord from the official site
+  djv                       - DJV2 - Professional media review software for VFX, animation, and film production
+  docker-desktop            - Docker Desktop from the official site
+  draw.io                   - diagrams.net desktop
+  duckstation               - DuckStation is an simulator/emulator of the Sony PlayStation(TM) from the official site
+  duplicati                 - Duplicati from the official site
+  eagle                     - EAGLE (EDA software) from the official site
+  edge                      - Microsoft Edge browser (dev) from the official site
+  element-desktop           - A feature-rich client for Matrix.org
+  elyprismlauncher          - Fork of Prism Launcher adds integrated support for Ely.by accounts (MSA accounts can still be used)
+  epson-printer-utility     - Epson Printer Utility - Linux Epson Printer Utility from the official site
+  epsonscan2-non-free-plugin - Epson Scan 2 non-free-plugin - Linux Scanner Driver from the official site
+  epsonscan2                - Epson Scan 2 - Linux Scanner Driver from the official site
+  everdo                    - A productivity app for GTD (Getting Things Done) from the official site
+  express-client            - eXpress client from the official site
+  far2l-portable            - FAR2L Portable from the official site
+  faststone-image-viewer    - An image browser, converter and editor that supports all major graphic formats.
+  fbreader                  - An ePub reader supporting Readium LCP DRM. Also opens fb2 and other formats. Free, fast, configurable
+  figma                     - Figma-linux - an unofficial Electron-based Figma desktop app for Linux
+  firefox-esr               - Firefox ESR - Fast and Private Web Browser
+  firefox-nightly           - Firefox nightly from the official site
+  firefox                   - Fast and Private Web Browser
+  firestorm-os              - Firestorm Open Simulator viewer
+  firestorm                 - Firestorm Second Life viewer
+  flashplayer               - Adobe Flash Player from the official site
+  flyview-client            - FlyView Client from the official site
+  flyview-server            - FlyView (Ipera) Server from the official site
+  forticlient-vpn           - FortiClient VPN-only from the official site
+  forticlient               - FortiClient from the official site
+  fplus-upd-ppd             - fplus drivers from the official site
+  freedownloadmanager       - Powerful modern download accelerator and organizer for Windows, macOS, Android, and Linux
+  freeoffice                - SoftMaker Free Office from the official site
+  freeplane                 - FreePlane from the official site
+  freetube                  - The Private YouTube Client
+  furmark                   - GPU Stress Test OpenGL and Vulkan Graphics Benchmark
+  gdlauncher                - All-In-One Minecraft Modded Launcher
+  geforce-infinity          - Is a next-gen application designed to enhance the GeForce NOW experience
+  geogebra                  - Geogebra 6 from the official site
+  gigaide                   - GIGA IDE CE — IDE based on IDEA/PyCharm
+  gitkraken                 - GitKraken Client from the official site
+  gitlab-runner             - Gitlab runner
+  goland                    - GoLand CE — IDE for Go developers
+  goofcord                  - The highly configurable and privacy minded discord client
+  google-earth              - 3D interface to explore the globe, terrain, streets, buildings and other planets (Pro version)
+  gradle                    - Gradle is a build automation tool known for its flexibility to build software
+  guardant                  - Guardant License Server from the official site
+  hansoft-client            - Hansoft client from the official site
+  headscale                 - An open source, self-hosted implementation of the Tailscale control server
+  heroic-games-launcher     - Is an Open Source Game Launcher for Linux. It supports launching games from the Epic Games Store, GOG Games and Amazon Games
+  hiddify                   - Кроссплатформенный прокси-клиент на основе ядра Sing-box
+  hplip-plugin              - Binary plugin for HPs hplip printer driver library
+  idea-community            - IntelliJ IDEA Community Edition - The Leading Java and Kotlin IDE from the official site
+  idea                      - IntelliJ IDEA Ultimate - The Leading Java and Kotlin IDE from the official site
+  iptvnator                 - IPTV player from the official site
+  jellyfin-server           - Jellyfin is the volunteer-built media solution that puts you in control of your media.
+  jellyfin-web              - Web client for Jellyfin.
+  jetbrains-toolbox         - JetBrains Toolbox App from the official site
+  joplin                    - Joplin - an open source note taking and to-do application with synchronisation capabilities
+  k3s                       - K3s - Lightweight Kubernetes from the official site
+  ktalk                     - Контур.Толк (ktalk) from the official site
+  kubo                      - Kubo - An IPFS implementation in Go from the official site
+  kyocera-sane              - Kyocera sane scanner support package
+  kyodialog-phase5          - KYOCERA Printing Package (Linux Universal Driver)
+  kyodialog                 - KYOCERA Printing Package (Linux Universal Driver)
+  lens                      - Is the most powerful IDE for people who need to deal with Kubernetes clusters on a daily basis. Ensure your clusters are properly setup and configured
+  lenza                     - Lenza — мессенджер для общения в твоей команде
+  levenhuklite              - LevenhukLite microscope
+  lexmark-upd-ppd           - Linux Universal Print Driver with 64-bit packaging for Lexmark Printers
+  librewolf                 - LibreWolf - a custom version of Firefox, focused on privacy, security and freedom
+  liteide                   - LiteIDE is a simple, open source, cross-platform Go IDE. From the official site
+  lithium                   - CAD of printed circuit boards
+  lm-studio                 - Download and run Llama, DeepSeek, Mistral, Phi on your computer.
+  localsend                 - An open-source cross-platform alternative to AirDrop
+  logseq                    - Logseq - a platform for knowledge management and collaboration. From the official site
+  lossless-cut              - The swiss army knife of lossless video/audio editing
+  lunacy                    - Lunacy - Graphic Design Editor
+  lycheeslicer              - Lychee Slicer - A powerful and versatile Slicer for Resin and Filament 3D Printers from the official site
+  madcad                    - uimadcad is a GUI (Graphical User Interface) meant to ease the use of pymadcad
+  mailspring                - Mailspring - a beautiful, fast and fully open source mail client
+  master-pdf-editor         - Master PDF Editor from the official site
+  mattermost-desktop        - Mattermost Desktop application for Linux from the official site
+  max-qt                    - Быстрое и лёгкое приложение для общения и решения повседневных задач (перепаковка Qt версии через wine)
+  max                       - Быстрое и лёгкое приложение для общения и решения повседневных задач
+  meridius                  - Meridius — music player for VK
+  min                       - A fast, minimal browser that protects your privacy
+  minecraft-launcher        - Minecraft launcher from the official site
+  mobirise                  - Mobirise - create awesome mobile-friendly websites!
+  moonlight                 - GameStream client for PCs (Windows, Mac, and Linux)
+  mssql-server-fts          - MS SQL Server Full Text Search
+  mssql-server              - MS SQL Server 2019 from the official site
+  mssql-tools               - MS SQL Server sqlcmd and bcp from the official site
+  mts-link                  - Ecosystem of services for business communications and collaboration
+  muffon                    - muffon is a cross-platform music streaming client for desktop, which helps you listen to, discover and organize music in an advanced way.
+  murglar                   - Desktop player/downloader for popular music streaming services
+  myoffice                  - MyOffice Standart Home Edition for Linux from the official site
+  mytonwallet               - MyTonWallet from the official site
+  naps2                     - Scan documents to PDF and more, as simply as possible.
+  nekoray                   - Qt based cross-platform GUI proxy configuration manager (backend: Xray / sing-box)
+  neovide                   - No Nonsense Neovim Client in Rust from the official site
+  netbeans                  - Apache NetBeans from the official site
+  netbird-ui                - GUI for managing NetBird
+  netbird                   - Secure WireGuard® overlay network with SSO/MFA.
+  ngrok                     - ngrok is the programmable network edge that adds connectivity, security, and observability to your apps with no code changes.
+  nomachine                 - NoMachine from the official site
+  notepad-next              - A cross-platform, reimplementation of Notepad++
+  novelwriter               - novelWriter - a markdown-like editor for novels
+  nsg-client                - Is the client software that allows access to corporate data and applications through Citrix ADC
+  nwjs-ffmpeg-prebuilt      - FFmpeg prebuilt binaries for NW.js / Chromium from the official project site
+  obs-linuxbrowser          - Portable version of OBS linux browser
+  obsidian                  - Obsidian from the official site
+  occt                      - Free, all-in-one stability, stress test, benchmark and monitoring tool for PC
+  okular-csp                - Okular GOST (free version) with CryptoPro support from the official site
+  onlyoffice                - ONLYOFFICE for Linux from the official site
+  openide                   - openIDE - Free IDE based on IntelliJ IDEA Community Edition
+  opera                     - Opera browser from the official site
+  orca-slicer               - Orca Slicer is an open source slicer for FDM printers
+  pachca                    - Корпоративный мессенджер Пачка с официального сайта
+  packet-tracer             - Cisco PacketTracer
+  pantum                    - CUPS and SANE drivers for Pantum series printer and scanner
+  pcsx2                     - PCSX2 - free and open-source PlayStation 2 (PS2) emulator from the official site
+  pdfsam-basic              - is free and open source desktop application to split, merge, extract pages, rotate and mix PDF files
+  pencil                    - Pencil from the official site
+  penpot-desktop            - Penpot Desktop from the snapcraft
+  persepolis                - Persepolis is a download manager written in Python.
+  pfusp                     - Ricoh SP-1120N / SP-1125N / SP-1130N Image Scanner Driver Linux from the official site
+  phpstorm                  - PhpStorm - The Lightning-Smart PHP IDE from the official site
+  piktomir                  - Piktomir ПиктоМир Младший брат КуМира
+  plex-desktop              - Plex Desktop from the official site
+  polymc                    - Minecraft launcher with the ability to manage multiple instances
+  popcorn-time              - Popcorn Time is a multi-platform, free software BitTorrent client that includes an integrated media player
+  portmaster                - Portmaster from the official site
+  portproton                - PortProton (from the repository if the package is there, or from the official site)
+  postman                   - Postman is an API platform for building and using APIs
+  powershell                - Microsoft PowerShell from the official site
+  prismlauncher             - Minecraft launcher with the ability to manage multiple instances
+  protonup-qt               - Install and manage GE-Proton and Luxtorpeda for Steam and Wine-GE for Lutris with this graphical user interface
+  pstube                    - PsTube (formerly FluTube) - Watch and download videos without ads. From the official site
+  pulsar                    - A Community-led Hyper-Hackable Text Editor from the official site
+  pureref                   - Reference Image Viewer
+  pycharm-pro               - PyCharm Professional — The Python IDE for Professional Developers (Trial)
+  pycharm                   - PyCharm CE — The Python IDE for Professional Developers
+  q-spider                  - A player that allows you to run QSP games in your browser.
+  qsp-classic               - Classic QSP player
+  r7-office-organizer-pro   - R7 Office Organizer Pro for Linux from the official site
+  r7-office-organizer       - R7 Office Organizer for Linux from the official site
+  r7-office                 - R7 Office for Linux from the official site
+  radicle-httpd             - Radicle is a sovereign code forge built on Git.
+  radicle                   - Radicle is a sovereign code forge built on Git.
+  raindrop                  - Raindrop.io from the snapcraft
+  rats-search               - A BitTorrent search program for desktop and web
+  realvnc-server            - Real VNC Server from the official site
+  realvnc-viewer            - Real VNC Viewer from the official site
+  reaper                    - REAPER is a complete digital audio production application for computers, offering a full multitrack audio and MIDI recording, editing, processing, mixing and mastering toolset.
+  refind                    - An EFI boot manager utility
+  rememberthemilk           - The smart to-do app for busy people
+  rider                     - Rider - A cross-platform IDE for .NET and game dev from the official site
+  ridoclnx                  - RiDocLNX - scanner software for Linux
+  rlinux                    - File recovery utility for the ext2/ext3/ext4 file system
+  rocketchat                - Rocket.Chat Linux Desktop Client from the official site
+  rpcs3                     - RPCS3 - free and open-source PlayStation 3 emulator from the official site
+  rstudio                   - RStudio from the official site
+  rubymine                  - RubyMine — IDE for Ruby and Rails developers
+  rudesktop                 - RuDesktop for Linux from the official site
+  rupost                    - RuPost Desktop Personal from the official site
+  rustdesk-libsciter-gtk    - Embeddable HTML/CSS/JavaScript engine for modern UI development (only for RustDesk from Sisyphus)
+  rustdesk                  - RustDesk — Display and control your PC and Android devices
+  rustrover                 - RustRover — IDE for Rust developers
+  s4a                       - A Scratch modification that allows for simple programming of the Arduino open source hardware platform
+  salutejazz                - Online meeting service from the official site
+  sane-katusham247          - Linux Scan Driver for katusha m247 Scanner
+  sane-panakvs              - Panasonic Scanner Driver for Linux from the official site
+  schildichat-desktop       - Matrix client / Element Web / Desktop fork
+  sidequest                 - The SideQuest desktop application
+  signal                    - Signal private messenger from the official site
+  simplenote                - A Simplenote React client packaged in Electron.
+  simplex                   - The first messaging network operating without user identifiers of any kind
+  singularityapp            - SingularityApp from the official site
+  slack                     - Slack from the official site
+  smathstudio               - SMath Studio from the official site
+  snap4arduino              - Snap4Arduino binds Snap! and Arduino together
+  spotify                   - Spotify client for Linux from the official site
+  spravki-bk                - Система подготовки отчетности «Справки БК»
+  steam                     - Steam Launcher (from the repository if the package is there, or from the official site)
+  sublime                   - Sublime Text 4 from the official site
+  sunshine                  - Self-hosted game stream host for Moonlight
+  svp4                      - SmoothVideo Project 4 (SVP4)
+  synology-chat             - Synology Chat Client from the official site
+  synology-drive            - Synology Drive Client from the official site
+  t1client                  - DSSL Trassir Client
+  tabby                     - A terminal for a more modern age
+  tailscale                 - The easiest, most secure way to use WireGuard and 2FA
+  tamtam                    - TamTam messenger from the official site
+  teams-for-linux           - Unofficial Microsoft Teams for Linux client from the official site
+  teams                     - Microsoft Teams for Linux from the archive.org of the official site
+  teamspeak                 - TeamSpeak Client for Linux from the official site
+  teamspeak3                - TeamSpeak3 Client for Linux from the official site
+  teamviewer                - Teamviewer from the official site
+  telegram                  - Telegram client from the official site
+  thinlinc-client           - ThinLinc Client from the official site
+  tixati                    - It is a New and Powerful P2P System
+  todoist                   - Todoist client application from the official site
+  tonkeeper                 - Tonkeeper desktop from the official site
+  torrserver                - Torrent to http. Streams media torrent files as media streams without fully downloading
+  tradingview               - TradingView from the snapcraft
+  trezor-suite              - Management software for Trezor hardware cryptocurrency wallets
+  trueconf-server           - TrueConf server for Linux from the official site
+  trueconf                  - TrueConf client for Linux from the official site
+  tsukimi                   - A Simple Third-party GTK4 Emby client
+  ungoogled-chromium        - Google Chromium, sans integration with Google from the official site
+  unifiedremote             - Unified Remote Server from the official site
+  unigine-heaven            - Unigine Heaven 2009 (Unigine Benchmark) from the official site
+  unigine-superposition     - Unigine Superposition 2017 (Unigine Benchmark) from the official site
+  unigine-valley            - Unigine Valley 2013 (Unigine Benchmark) from the official site
+  unityhub                  - Unity Hub from the official site
+  upscayl                   - Free and Open Source AI Image Upscaler
+  v2rayn                    - A GUI client for Windows, Linux and macOS, support Xray core and sing-box-core and others
+  vdhcoapp                  - Video DownloadHelper Companion App 2
+  ventoy                    - A new bootable USB solution
+  vesktop                   - A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed
+  viber                     - Viber for Linux from the official site
+  vintasoft-web-twain-service - Vintasoft Web TWAIN service (Linux edition)
+  vinteo.desktop            - Client for Vinteo videoconferencing server
+  virtualbox-extpack        - Oracle VM VirtualBox Extension pack from the official site (personal use only)
+  virtualbox                - VirtualBox from the ALT repo
+  virtualhere               - Generic VirtualHere USB Server from the official site
+  vivaldi                   - Vivaldi browser from the official site
+  vk-messenger              - VK Messenger from the official site
+  vk                        - VK Messenger from the official site
+  vkcalls                   - VK Calls for Linux from the official site
+  vkteams                   - VK Teams for Linux from the official site
+  vuescan                   - VueScan from the official site
+  warp-terminal             - The intelligent terminal from the official site
+  waterfox                  - Fast and Private Web Browser
+  weasis                    - Weasis DICOM medical viewer
+  webcord                   - A Discord and Spacebar client implemented directly without Discord API from the official github
+  webdavmailrucloud         - WebDAV emulator for Cloud.mail.ru / Yandex.Disk
+  webex                     - AI-driven collaboration and customer experience that works for you
+  webots                    - Webots: open-source robot simulator
+  webstorm                  - WebStorm - The smartest JavaScript IDE from the official site
+  whatsapp                  - An unofficial WhatsApp desktop application (from the repository if the package is there, or from the official site)
+  whatsie                   - Whatsie from the snapcraft (WhatsApp for Linux)
+  winbox                    - Winbox from the official site
+  windscribe                - Windscribe GUI tool for Linux
+  wing                      - Wing Python IDE Personal from the official site
+  wpsoffice-cn              - WPS Office for Linux from the official site (Chinese version)
+  wpsoffice                 - WPS Office for Linux from the official site
+  xeoma                     - Video surveillance with AI video analytics
+  xerox-spl-driver          - Xerox SPL Linux Driver for printers and scanners
+  xnconvert                 - XnConvert: Image Converter from the official site
+  xnview                    - XnView MP: Image management from the official site
+  xod-ide                   - A visual programming language for microcontrollers
+  xppen                     - XP-Pen (Official) Linux utility
+  yandex-browser            - Yandex browser from the official site
+  yandex-disk-indicator     - Panel indicator (GUI) for YandexDisk CLI client for Linux
+  yandex-disk               - Yandex Disk from the official site
+  yandex-music              - Native Yandex Music client for Linux. Made with OSX/Windows beta client repacking
+  yandex-telemost           - Yandex telemost from the official site
+  yaradio-yamusic           - Yandex Radio + Yandex Music - unofficial desktop application
+  yougile                   - Система управления проектами и задачами
+  youtube-music             - YouTube Music Desktop App bundled with custom plugins (and built-in ad blocker / downloader)
+  yucca                     - Simple solution for video surveillance
+  zed                       - High-performance, multiplayer code editor from the creators of Atom and Tree-sitter
+  zen-browser               - Performance oriented Firefox-based web browser
+  zerotier-one              - ZeroTier - A Smart Ethernet Switch for Earth from the official site
+  zlibrary                  - Z-Library Desktop Launcher
+  zoom                      - Zoom client from the official site
+  zwcad-viewer              - ZWCAD Viewer from the official site
