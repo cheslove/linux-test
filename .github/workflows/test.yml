@@ -3,20 +3,24 @@ on: [push, workflow_dispatch]
 jobs:
   browsers:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 35
     env: { GH_TOKEN: "${{ github.token }}" }
     steps:
       - uses: actions/checkout@v4
       - run: bash browsers.sh
         continue-on-error: true
+        timeout-minutes: 28
       - uses: actions/upload-artifact@v4
+        if: always()
         with: { name: browsers, path: out/browsers }
   office:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 58
     steps:
       - uses: actions/checkout@v4
       - run: docker run --rm -v "$PWD:/w" alt:p11 bash /w/office.sh 2>&1 | tail -200
         continue-on-error: true
+        timeout-minutes: 50
       - uses: actions/upload-artifact@v4
+        if: always()
         with: { name: office, path: out/office }
